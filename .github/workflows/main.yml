@@ -1,0 +1,52 @@
+name: Playwright Pytest
+on: push
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipenv
+          pipenv install --system
+          playwright install chromium
+          pipenv install faker
+
+      - name: Run tests
+        run: pytest
+
+      - name: Allure Report action from marketplace
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: reports
+          allure_history: allure-history
+          keep_reports: 20
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history
+
+      - name: Report status
+        if: always()
+        uses: ravsamhq/notify-slack-action@v1
+        with:
+            status: ${{ job.status }}
+            message_format: ${{ secrets.GH_ACTIONS_URL }}
+            notify_when: "success,failure"
+        env:
+            SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
