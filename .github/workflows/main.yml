@@ -1,5 +1,7 @@
 name: Playwright Pytest
 on: push
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,7 +12,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.x
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
