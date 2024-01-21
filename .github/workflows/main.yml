@@ -18,6 +18,7 @@ jobs:
           pip install pipenv
           pipenv install --system
           playwright install chromium
+          pipenv install faker
 
       - name: Run tests
         run: pytest
