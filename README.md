@@ -1,6 +1,7 @@
 # playwright_pytest
 
 Playwright + pytest testing framework. 
+
 [Tested website](https://www.automationexercise.com)
 
 [Test cases](https://www.automationexercise.com/test_cases)
