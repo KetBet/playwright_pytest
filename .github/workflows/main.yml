@@ -10,9 +10,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.x
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
@@ -20,7 +20,7 @@ jobs:
           pip install pipenv
           pipenv install --system
           playwright install chromium
-          pipenv install faker
+          pip install Faker
 
       - name: Run tests
         run: pytest
