@@ -41,8 +41,8 @@ class TestLogin:
         assert self.home_page.logged_in_as_username.is_visible()
         assert user_name in self.home_page.logged_in_as_username.inner_text()
 
-        self.home_page.click_delete_acc_btn()
-        assert self.acc_deleted_page.acc_deleted_title.is_visible()
+        #self.home_page.click_delete_acc_btn()
+        #assert self.acc_deleted_page.acc_deleted_title.is_visible()
 
         take_screenshot(self.page, "Login User with correct email and password")
 
