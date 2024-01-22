@@ -21,7 +21,7 @@ Playwright + pytest testing framework.
     pip install pipenv
     pipenv install --system
     playwright install chromium
-    pipenv install faker
+    pip install Faker
     ```
 
 ## Run Playwrigth tests
