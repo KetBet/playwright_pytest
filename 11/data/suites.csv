@@ -1,0 +1,51 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Jan 22 23:20:16 GMT 2024","Mon Jan 22 23:20:21 GMT 2024","4619","tests","test_registration","TestRegistrationPage","","","test_register_user","Test to verify the user registration with valid credentials
+
+        :param test_setup: setting up the browser and page objects
+        :return: None
+        "
+"passed","Mon Jan 22 23:20:05 GMT 2024","Mon Jan 22 23:20:06 GMT 2024","877","tests","test_login","TestLogin","","","test_login_user_with_incorrect_email_and_password","Test to verify login with invalid credentials
+
+        :param test_setup: setting up the browser and page objects
+        :return: None
+        "
+"passed","Mon Jan 22 23:20:02 GMT 2024","Mon Jan 22 23:20:03 GMT 2024","1721","tests","test_login","TestLogin","","","test_login_user_with_correct_email_and_password","Test to verify login with valid credentials
+
+        :param test_setup: setting up the browser and page objects
+        :return: None
+        "
+"passed","Mon Jan 22 23:20:11 GMT 2024","Mon Jan 22 23:20:12 GMT 2024","576","tests","test_products","TestProductsPage","","","test_verify_all_products_and_product_detail_page","Test to verify all products and product detail page
+
+        :param test_setup: setting up the browser and page objects
+        :return: None
+        "
+"passed","Mon Jan 22 23:19:53 GMT 2024","Mon Jan 22 23:19:57 GMT 2024","3414","tests","test_contact_us","TestContactUsPage","","","test_contact_us_form","Test to verify the contact us form
+
+        :param test_setup: setting up the browser and page objects
+        :return: None
+        "
+"passed","Mon Jan 22 23:20:23 GMT 2024","Mon Jan 22 23:20:24 GMT 2024","665","tests","test_registration","TestRegistrationPage","","","test_register_user_with_existing_email","Test to verify new user registration with existing email
+
+        :param test_setup: setting up the browser and page objects
+        :return: None
+        "
+"passed","Mon Jan 22 23:20:08 GMT 2024","Mon Jan 22 23:20:09 GMT 2024","1216","tests","test_login","TestLogin","","","test_logout_user","Test to verify the logout
+
+        :param test_setup: setting up the browser and page objects
+        :return: None
+        "
+"passed","Mon Jan 22 23:20:14 GMT 2024","Mon Jan 22 23:20:14 GMT 2024","696","tests","test_products","TestProductsPage","","","test_search_product","Test to verify the products search functionality
+
+        :param test_setup: setting up the browser and page objects
+        :return: None
+        "
+"passed","Mon Jan 22 23:19:58 GMT 2024","Mon Jan 22 23:20:00 GMT 2024","2022","tests","test_home","TestHomePage","","","test_verify_subscription_in_home_page","Test to verify the subscription functionality
+
+        :param test_setup: setting up the browser and page objects
+        :return: None
+        "
+"passed","Mon Jan 22 23:19:51 GMT 2024","Mon Jan 22 23:19:52 GMT 2024","947","tests","test_cases","TestCasesPage","","","test_verify_test_cases_page","Test to verify the test cases page
+
+        :param test_setup: setting up the browser and page objects
+        :return: None
+        "
